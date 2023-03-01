@@ -7,7 +7,7 @@ import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import utils.ExcelDataProvider;
+
 
 public class LoginPage {
 	
@@ -21,8 +21,8 @@ public class LoginPage {
 	
 	}
 	
-	@Test(dataProvider = "Patient Data")
-	public void login(String userName,String password){
+	@Test
+	public void login(){
 		
 		driver.get("https://chl.alpha-app.tls.global/Account/Login");
 		driver.manage().window().maximize();

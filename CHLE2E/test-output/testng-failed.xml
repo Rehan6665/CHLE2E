@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="chl.CreatePatient">
+      <class name="chl.LoginPage">
         <methods>
           <include name="driverInitiation"/>
+          <include name="closeBrowser"/>
           <include name="login"/>
         </methods>
-      </class> <!-- chl.CreatePatient -->
+      </class> <!-- chl.LoginPage -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

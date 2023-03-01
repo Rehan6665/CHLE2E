@@ -51,8 +51,9 @@ public class CreatePatient {
 	
 		
 		driver.findElement(By.xpath("//*[@id=\"ParentSubscriptionID_chosen\"]/div/div/input")).sendKeys(Subsription);
-		driver.findElement(By.xpath("//*[@id=\"timeZone_chosen\"]/div/div/input")).sendKeys(Keys.TAB);
-
+		driver.findElement(By.xpath("//*[@id=\"ParentSubscriptionID_chosen\"]/div/div/input")).sendKeys(Keys.ENTER,Keys.TAB);
+		
+	
 		driver.findElement(By.id("FirstName")).sendKeys(firstname);
 		driver.findElement(By.id("LastName")).sendKeys(lastname);
 		driver.findElement(By.xpath("//*[@id=\"Email\"]")).sendKeys(email);
@@ -79,7 +80,9 @@ public class CreatePatient {
 		
 		driver.findElement(By.xpath("//*[@id=\"timeZone_chosen\"]/a/span")).click();
 		driver.findElement(By.xpath("//*[@id=\"timeZone_chosen\"]/div/div/input")).sendKeys(timeZone);
-		driver.findElement(By.xpath("//*[@id=\"timeZone_chosen\"]/div/div/input")).sendKeys(Keys.DOWN, Keys.TAB);
+		driver.findElement(By.xpath("//*[@id=\"timeZone_chosen\"]/div/div/input")).sendKeys(Keys.ENTER,Keys.TAB);
+		
+	
 		
 	
 		
