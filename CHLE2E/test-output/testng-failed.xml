@@ -6,7 +6,8 @@
       <class name="chl.CreatePatient">
         <methods>
           <include name="driverInitiation"/>
-          <include name="login"/>
+          <include name="createPatient" invocation-numbers="0"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- chl.CreatePatient -->
     </classes>

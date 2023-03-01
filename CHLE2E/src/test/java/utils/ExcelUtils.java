@@ -35,7 +35,7 @@ public class ExcelUtils {
 		return columnCount;
 
 	} 
-	
+
 	public int getRowCount() {
 
 
@@ -61,18 +61,24 @@ public class ExcelUtils {
 
 
 	} 	
-	
+
 	public CellType getCellType(int rowNum, int colNum) {
-		
-		CellType type = sheet.getRow(rowNum).getCell(colNum).getCellType();
-		return type;
-
-		
-	
 
 
-	} 	
+
+		if(sheet.getRow(rowNum).getCell(colNum)==null) {
+
+			return CellType.BLANK;
+
+		}
+		else {
+			CellType type = sheet.getRow(rowNum).getCell(colNum).getCellType();
+
+			return type;}
 
 
+	}
 }
+
+
 
