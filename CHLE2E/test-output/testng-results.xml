@@ -1,38 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Browser closed successfully]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-03-02T00:04:28 IST" name="Default suite" finished-at="2023-03-02T00:04:48 IST" duration-ms="19288">
+  <suite started-at="2023-03-02T02:07:42 IST" name="Default suite" finished-at="2023-03-02T02:08:01 IST" duration-ms="18574">
     <groups>
     </groups>
-    <test started-at="2023-03-02T00:04:28 IST" name="Default test" finished-at="2023-03-02T00:04:48 IST" duration-ms="19288">
+    <test started-at="2023-03-02T02:07:42 IST" name="Default test" finished-at="2023-03-02T02:08:01 IST" duration-ms="18574">
       <class name="chl.CreatePatient">
-        <test-method is-config="true" signature="driverInitiation()[pri:0, instance:chl.CreatePatient@c430e6c]" started-at="2023-03-02T00:04:27 IST" name="driverInitiation" description="Login into CHL" finished-at="2023-03-02T00:04:28 IST" duration-ms="1595" status="PASS">
+        <test-method is-config="true" signature="driverInitiation()[pri:0, instance:chl.CreatePatient@c430e6c]" started-at="2023-03-02T02:07:41 IST" name="driverInitiation" description="Login into CHL" finished-at="2023-03-02T02:07:42 IST" duration-ms="1479" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverInitiation -->
-        <test-method signature="login()[pri:1, instance:chl.CreatePatient@c430e6c]" started-at="2023-03-02T00:04:29 IST" name="login" finished-at="2023-03-02T00:04:37 IST" duration-ms="8436" status="PASS">
+        <test-method signature="login()[pri:1, instance:chl.CreatePatient@c430e6c]" started-at="2023-03-02T02:07:42 IST" name="login" finished-at="2023-03-02T02:07:51 IST" duration-ms="8722" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="createPatient(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:chl.CreatePatient@c430e6c]" started-at="2023-03-02T00:04:39 IST" name="createPatient" data-provider="Patient Data" finished-at="2023-03-02T00:04:48 IST" duration-ms="8863" status="PASS">
+        <test-method signature="createPatient(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:chl.CreatePatient@c430e6c]" started-at="2023-03-02T02:07:52 IST" name="createPatient" data-provider="Patient Data" finished-at="2023-03-02T02:08:01 IST" duration-ms="8606" status="FAIL">
           <params>
             <param index="0">
-              <value>
-                <![CDATA[Test Agency 1.1 (performance testing)]]>
-              </value>
+              <value is-null="true"/>
             </param>
             <param index="1">
-              <value>
-                <![CDATA[Agency Test Patient(feb)]]>
-              </value>
+              <value is-null="true"/>
             </param>
             <param index="2">
               <value>
-                <![CDATA[Laptop]]>
+                <![CDATA[Bhaldar]]>
               </value>
             </param>
             <param index="3">
@@ -46,9 +42,7 @@
               </value>
             </param>
             <param index="5">
-              <value>
-                <![CDATA[+917676567656]]>
-              </value>
+              <value is-null="true"/>
             </param>
             <param index="6">
               <value>
@@ -66,10 +60,54 @@
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[The following asserts failed:
+did not expect [The Agency Subscription field is required.] but found [The Agency Subscription field is required.],
+did not expect [The Primary Phone Number field is required.] but found [The Primary Phone Number field is required.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: The following asserts failed:
+did not expect [The Agency Subscription field is required.] but found [The Agency Subscription field is required.],
+did not expect [The Primary Phone Number field is required.] but found [The Primary Phone Number field is required.]
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+at chl.CreatePatient.createPatient(CreatePatient.java:136)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:962)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:806)
+at org.testng.TestRunner.run(TestRunner.java:601)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:433)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:427)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:387)
+at org.testng.SuiteRunner.run(SuiteRunner.java:330)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1256)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1176)
+at org.testng.TestNG.runSuites(TestNG.java:1099)
+at org.testng.TestNG.run(TestNG.java:1067)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPatient -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:chl.CreatePatient@c430e6c]" started-at="2023-03-02T00:04:48 IST" name="closeBrowser" description="Closing the browser" finished-at="2023-03-02T00:04:48 IST" duration-ms="146" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:chl.CreatePatient@c430e6c]" started-at="2023-03-02T02:08:01 IST" name="closeBrowser" description="Closing the browser" finished-at="2023-03-02T02:08:01 IST" duration-ms="98" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser closed successfully]]>

@@ -3,13 +3,14 @@ package utils;
 
 
 import org.apache.poi.ss.usermodel.CellType;
+import org.testng.SkipException;
 import org.testng.annotations.DataProvider;
 
 public class ExcelDataProvider {
 
 
 
-	static String excelPath = "C:\\\\Eclipse\\\\CHLE2E\\\\Data\\\\LoginData.xlsx";
+	static String excelPath = "C:\\Users\\hp\\git\\CHLE2E\\CHLE2E\\Data\\LoginData.xlsx";
 	static String sheetName = "PatientDetails";
 	
 
@@ -54,8 +55,11 @@ public class ExcelDataProvider {
 					data[i-1][j] = cellData;
 
 				}
-
-
+				else if(excel.getCellType(i,j) == CellType.BLANK) {
+					
+					continue;
+				}
+				
 
 			}
 			System.out.println();
