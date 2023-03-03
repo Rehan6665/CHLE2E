@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>2/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Mar 02 02:07:42 IST 2023</td>
+<td>Started on:</td><td>Fri Mar 03 15:08:16 IST 2023</td>
 </tr>
-<tr><td>Total time:</td><td>18 seconds (18574 ms)</td>
+<tr><td>Total time:</td><td>24 seconds (24816 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,13 +76,12 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='chl.CreatePatient.createPatient()'><b>createPatient</b><br>Test class: chl.CreatePatient<br>Parameters: null, null, Bhaldar, febpatienttest@gmail.com, Test@123, null, 20-12-2022, Female, Chennai</td>
+<td title='chl.CreatePatient.createPatient()'><b>createPatient</b><br>Test class: chl.CreatePatient<br>Parameters: Test Agency 1.1 (performance testing), Agency Test Patient(feb) , laptop, febpatienttestt@gmail.com, Test@123, +917676567656, 20-12-2022, Female, Chennai</td>
 <td><div><pre>java.lang.AssertionError: The following asserts failed:
-	did not expect [The Agency Subscription field is required.] but found [The Agency Subscription field is required.],
-	did not expect [The Primary Phone Number field is required.] but found [The Primary Phone Number field is required.]
+	Same email id did not expect [Email ID already exist.] but found [Email ID already exist.]
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-	at chl.CreatePatient.createPatient(CreatePatient.java:136)
+	at chl.CreatePatient.createPatient(CreatePatient.java:142)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -111,13 +110,12 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace1163216403", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1163216403'><pre>java.lang.AssertionError: The following asserts failed:
-	did not expect [The Agency Subscription field is required.] but found [The Agency Subscription field is required.],
-	did not expect [The Primary Phone Number field is required.] but found [The Primary Phone Number field is required.]
+</pre></div><a href='#' onClick='toggleBox("stack-trace1114681666", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1114681666'><pre>java.lang.AssertionError: The following asserts failed:
+	Same email id did not expect [Email ID already exist.] but found [Email ID already exist.]
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
 	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
-	at chl.CreatePatient.createPatient(CreatePatient.java:136)
+	at chl.CreatePatient.createPatient(CreatePatient.java:142)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -147,8 +145,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>8</td>
-<td>chl.CreatePatient@c430e6c</td></tr>
+<td>9</td>
+<td>chl.CreatePatient@536f2a7e</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -162,7 +160,12 @@ function toggleAllBoxes() {
 <td title='chl.CreatePatient.login()'><b>login</b><br>Test class: chl.CreatePatient</td>
 <td></td>
 <td>8</td>
-<td>chl.CreatePatient@c430e6c</td></tr>
+<td>chl.CreatePatient@536f2a7e</td></tr>
+<tr>
+<td title='chl.CreatePatient.patientList()'><b>patientList</b><br>Test class: chl.CreatePatient</td>
+<td></td>
+<td>5</td>
+<td>chl.CreatePatient@536f2a7e</td></tr>
 </table><p>
 </body>
 </html>
