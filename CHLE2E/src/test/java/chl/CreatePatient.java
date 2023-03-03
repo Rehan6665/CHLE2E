@@ -19,7 +19,13 @@ import utils.InitiateDriver;
 
 public class CreatePatient extends InitiateDriver{
 
-
+	String subscription;
+	String email;
+	String firstname;
+	String lastname;
+	String contactNumber;
+	String fullname;
+	
 
 	@Test(priority = 1)
 	public void login() {
@@ -37,8 +43,15 @@ public class CreatePatient extends InitiateDriver{
 
 
 	@Test(priority = 2,dataProvider = "Patient Data",dataProviderClass = ExcelDataProvider.class)
-	public void createPatient(String Subsription, String firstname, String lastname, String email
+	public void createPatient(String subsription, String firstname, String lastname, String email
 			, String password, String contactNumber, String dob, String gender, String timeZone) {
+		
+		this.subscription = subsription;
+		this.firstname = firstname;
+		this.lastname = lastname;
+		this.email = email;
+		this.contactNumber = contactNumber;
+		this.fullname = firstname +""+lastname;
 
 		try {
 
@@ -51,9 +64,9 @@ public class CreatePatient extends InitiateDriver{
 			driver.findElement(By.xpath("//*[@id=\"ParentSubscriptionID_chosen\"]/a/span")).click();
 
 
-			if(Subsription == null) {
+			if(subsription == null) {
 			driver.findElement(By.xpath("//*[@id=\"ParentSubscriptionID_chosen\"]/div/div/input")).sendKeys("");
-			}else {driver.findElement(By.xpath("//*[@id=\"ParentSubscriptionID_chosen\"]/div/div/input")).sendKeys(Subsription);}
+			}else {driver.findElement(By.xpath("//*[@id=\"ParentSubscriptionID_chosen\"]/div/div/input")).sendKeys(subsription);}
 
 			driver.findElement(By.xpath("//*[@id=\"ParentSubscriptionID_chosen\"]/div/div/input")).sendKeys(Keys.ENTER,Keys.TAB);
 			
@@ -133,7 +146,39 @@ public class CreatePatient extends InitiateDriver{
 			System.out.println("Excel Cells are not filled properly");
 		}
 
+	
+		
+		
 	}
-
+	
+	@Test(priority = 3)
+	public void patientList() {
+		
+		
+		driver.findElement(By.xpath("//*[@id=\"logoutForm\"]/ul[1]/li[2]/a")).click();
+		driver.findElement(By.xpath("//*[@id=\"SearchString\"]")).sendKeys(email);
+		driver.findElement(By.xpath("//*[@id=\"main-body\"]/form/div[1]/div[1]/button")).click();
+		
+		
+		
+		String fullname = driver.findElement(By.xpath("/html/body/div[2]/table/tbody/tr/td[1]")).getText();
+		String email = driver.findElement(By.xpath("//html/body/div[2]/table/tbody/tr/td[2]")).getText();
+		String contactnumber = driver.findElement(By.xpath("/html/body/div[2]/table/tbody/tr/td[3]")).getText();
+		String activestatus = driver.findElement(By.xpath("/html/body/div[2]/table/tbody/tr/td[4]/span")).getText();
+		String setupstatus = driver.findElement(By.xpath("/html/body/div[2]/table/tbody/tr/td[5]")).getText();
+	
+		SoftAssert softassert = new SoftAssert();
+		
+		softassert.assertEquals(this.fullname, fullname);
+		softassert.assertEquals(this.email, email);
+		softassert.assertEquals(this.contactNumber, contactnumber);
+		softassert.assertEquals(activestatus,"Yes");
+		softassert.assertAll();
+		
+		
+		
+	}
+	
+	
 
 }
