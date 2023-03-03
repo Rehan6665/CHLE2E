@@ -142,6 +142,7 @@ public class CreatePatient extends InitiateDriver{
 			softAssert.assertAll();
 		} catch (Exception e) {
 			// TODO: handle exception
+			
 			System.out.println(e);
 			System.out.println("Excel Cells are not filled properly");
 		}

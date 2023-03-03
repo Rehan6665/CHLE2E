@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Test"
+<testsuite name="Create Patient and verify patient is created "
            tests="3"
            failures="1"
            errors="0"
            skipped="0"
-           time="21.876">
+           time="21.633">
     <properties></properties>
 
             <testcase
                 name="createPatient"
-                time="8.288"
+                time="8.187"
                 classname="chl.CreatePatient">
 
             <failure type="java.lang.AssertionError" message="The following asserts failed:
@@ -23,13 +23,13 @@
 
 
             <testcase
-                name="patientList"
-                time="5.261"
+                name="login"
+                time="8.289"
                 classname="chl.CreatePatient">
             </testcase>
             <testcase
-                name="login"
-                time="8.327"
+                name="patientList"
+                time="5.157"
                 classname="chl.CreatePatient">
             </testcase>
 </testsuite>
