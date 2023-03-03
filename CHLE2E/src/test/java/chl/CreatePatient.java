@@ -15,18 +15,11 @@ import org.testng.asserts.SoftAssert;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import utils.ExcelDataProvider;
+import utils.InitiateDriver;
 
-public class CreatePatient {
+public class CreatePatient extends InitiateDriver{
 
-	String alertId = null;
-	public static WebDriver driver=null;
 
-	@BeforeSuite(description = "Login into CHL")
-	public void driverInitiation(){
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-
-	}
 
 	@Test(priority = 1)
 	public void login() {
@@ -142,13 +135,5 @@ public class CreatePatient {
 
 	}
 
-	@AfterSuite(description = "Closing the browser")
-	public void closeBrowser()
-	{
-
-		driver.close();
-		Reporter.log("Browser closed successfully");
-
-	}
 
 }

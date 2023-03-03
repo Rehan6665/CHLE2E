@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+  <listeners>
+    <listener class-name="utils.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="CreatPatient(failed)">
     <classes>
-      <class name="chl.LoginPage">
+      <class name="chl.CreatePatient">
         <methods>
           <include name="driverInitiation"/>
-          <include name="login"/>
+          <include name="createPatient" invocation-numbers="0"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- chl.LoginPage -->
+      </class> <!-- chl.CreatePatient -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- CreatPatient(failed) -->
 </suite> <!-- Failed suite [Suite] -->
