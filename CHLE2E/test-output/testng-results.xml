@@ -5,20 +5,20 @@
       <![CDATA[Browser closed successfully]]>
     </line>
   </reporter-output>
-  <suite started-at="2023-03-03T15:08:16 IST" name="Default suite" finished-at="2023-03-03T15:08:41 IST" duration-ms="24816">
+  <suite started-at="2023-03-03T16:18:48 IST" name="Suite" finished-at="2023-03-03T16:19:11 IST" duration-ms="22940">
     <groups>
     </groups>
-    <test started-at="2023-03-03T15:08:16 IST" name="Default test" finished-at="2023-03-03T15:08:41 IST" duration-ms="24816">
+    <test started-at="2023-03-03T16:18:48 IST" name="Test" finished-at="2023-03-03T16:19:11 IST" duration-ms="22940">
       <class name="chl.CreatePatient">
-        <test-method is-config="true" signature="driverInitiation()[pri:0, instance:chl.CreatePatient@536f2a7e]" started-at="2023-03-03T15:08:14 IST" name="driverInitiation" description="Login into CHL" finished-at="2023-03-03T15:08:16 IST" duration-ms="1558" status="PASS">
+        <test-method is-config="true" signature="driverInitiation()[pri:0, instance:chl.CreatePatient@5884a914]" started-at="2023-03-03T16:18:47 IST" name="driverInitiation" description="Login into CHL" finished-at="2023-03-03T16:18:48 IST" duration-ms="1542" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- driverInitiation -->
-        <test-method signature="login()[pri:1, instance:chl.CreatePatient@536f2a7e]" started-at="2023-03-03T15:08:16 IST" name="login" finished-at="2023-03-03T15:08:24 IST" duration-ms="8512" status="PASS">
+        <test-method signature="login()[pri:1, instance:chl.CreatePatient@5884a914]" started-at="2023-03-03T16:18:48 IST" name="login" finished-at="2023-03-03T16:18:57 IST" duration-ms="8327" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method signature="createPatient(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:chl.CreatePatient@536f2a7e]" started-at="2023-03-03T15:08:26 IST" name="createPatient" data-provider="Patient Data" finished-at="2023-03-03T15:08:36 IST" duration-ms="9653" status="FAIL">
+        <test-method signature="createPatient(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:chl.CreatePatient@5884a914]" started-at="2023-03-03T16:18:58 IST" name="createPatient" data-provider="Patient Data" finished-at="2023-03-03T16:19:06 IST" duration-ms="8288" status="FAIL">
           <params>
             <param index="0">
               <value>
@@ -111,11 +111,11 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createPatient -->
-        <test-method signature="patientList()[pri:3, instance:chl.CreatePatient@536f2a7e]" started-at="2023-03-03T15:08:36 IST" name="patientList" finished-at="2023-03-03T15:08:41 IST" duration-ms="5216" status="PASS">
+        <test-method signature="patientList()[pri:3, instance:chl.CreatePatient@5884a914]" started-at="2023-03-03T16:19:06 IST" name="patientList" finished-at="2023-03-03T16:19:11 IST" duration-ms="5261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- patientList -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:chl.CreatePatient@536f2a7e]" started-at="2023-03-03T15:08:41 IST" name="closeBrowser" description="Closing the browser" finished-at="2023-03-03T15:08:41 IST" duration-ms="125" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:chl.CreatePatient@5884a914]" started-at="2023-03-03T16:19:11 IST" name="closeBrowser" description="Closing the browser" finished-at="2023-03-03T16:19:11 IST" duration-ms="126" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Browser closed successfully]]>
@@ -123,6 +123,6 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </reporter-output>
         </test-method> <!-- closeBrowser -->
       </class> <!-- chl.CreatePatient -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

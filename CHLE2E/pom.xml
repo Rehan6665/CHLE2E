@@ -27,6 +27,7 @@
 			<version>7.6.1</version>
 			<scope>test</scope>
 		</dependency>
+		
 
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
@@ -35,6 +36,12 @@
 			<artifactId>poi</artifactId>
 			<version>5.2.3</version>
 		</dependency>
+<!-- https://mvnrepository.com/artifact/org.testng/reportng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>reportng</artifactId>
+    <version>1.2.2</version>
+</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 		<dependency>
