@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Default test"
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="5.142">
+    <properties></properties>
+
+
+
+            <testcase
+                name="panicButoon"
+                time="1.242"
+                classname="utils.ApiClass">
+            </testcase>
+            <testcase
+                name="motion"
+                time="1.265"
+                classname="utils.ApiClass">
+            </testcase>
+            <testcase
+                name="doorAndWindow"
+                time="2.635"
+                classname="utils.ApiClass">
+            </testcase>
+</testsuite>
