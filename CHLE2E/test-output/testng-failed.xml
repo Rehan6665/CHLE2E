@@ -1,20 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [CHL Create Patient]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
-    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
-    <listener class-name="utils.Listeners"/>
-  </listeners>
-  <test thread-count="5" name="Create Patient and verify patient is created (failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="chl.CreatePatient">
+      <class name="chl.CreateSensor">
         <methods>
+          <include name="createDoorWindowSensor"/>
           <include name="driverInitiation"/>
-          <include name="createPatient" invocation-numbers="0"/>
           <include name="closeBrowser"/>
+          <include name="createMotionSensor"/>
         </methods>
-      </class> <!-- chl.CreatePatient -->
+      </class> <!-- chl.CreateSensor -->
     </classes>
-  </test> <!-- Create Patient and verify patient is created (failed) -->
-</suite> <!-- Failed suite [CHL Create Patient] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

@@ -46,12 +46,12 @@ public class CreatePatient extends InitiateDriver{
 	public void createPatient(String subsription, String firstname, String lastname, String email
 			, String password, String contactNumber, String dob, String gender, String timeZone) {
 		
-		this.subscription = subsription;
+		this.subscription = subsription;	
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.email = email;
 		this.contactNumber = contactNumber;
-		this.fullname = firstname +""+lastname;
+		this.fullname = firstname +" "+lastname;
 
 		try {
 
@@ -179,7 +179,21 @@ public class CreatePatient extends InitiateDriver{
 		
 		
 	}
-	
-	
+
+	public String getfirtname() {
+		
+		return this.firstname;
+		
+		
+		
+	}
+
+	public String getfullname() {
+		
+		return this.fullname;
+		
+		
+		
+	}
 
 }
