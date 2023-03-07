@@ -8,19 +8,10 @@
   </listeners>
   <test thread-count="5" name="Create Patient and verify patient is created (failed)">
     <classes>
-      <class name="chl.CreateSensor">
-        <methods>
-          <include name="createDoorWindowSensor"/>
-          <include name="driverInitiation"/>
-          <include name="createNeedHelpSensor"/>
-          <include name="closeBrowser"/>
-          <include name="createMotionSensor"/>
-        </methods>
-      </class> <!-- chl.CreateSensor -->
       <class name="chl.CreatePatient">
         <methods>
           <include name="driverInitiation"/>
-          <include name="patientList"/>
+          <include name="createPatient" invocation-numbers="0"/>
           <include name="closeBrowser"/>
         </methods>
       </class> <!-- chl.CreatePatient -->

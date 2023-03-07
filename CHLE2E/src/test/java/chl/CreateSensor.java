@@ -10,6 +10,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
+import utils.ApiClass;
 import utils.ExcelDataProvider;
 import utils.InitiateDriver;
 
@@ -51,9 +52,9 @@ public class CreateSensor extends InitiateDriver{
 		this.firstname = firstname;
 		this.fullname = firstname +" "+lastname;
 		
-		SimpleDateFormat formatter = new SimpleDateFormat("_ddmm_HHmmss");
+		SimpleDateFormat formatter = new SimpleDateFormat("ddmmHHmmss");
 		Date date = new Date();
-		String deviceid = firstname + formatter.format(date);
+		String deviceid ="ND_"+formatter.format(date);
 		
 		driver.findElement(By.xpath("/html/body/div[2]/a")).click();
 		driver.findElement(By.xpath("//*[@id=\"SensorTypeId_chosen\"]/a/span")).click();
@@ -61,7 +62,7 @@ public class CreateSensor extends InitiateDriver{
 		driver.findElement(By.xpath("//*[@id=\"SensorTypeId_chosen\"]/div/div/input")).sendKeys(Keys.ENTER);
 		
 		
-		driver.findElement(By.xpath("//*[@id=\"model_DeviceId\"]")).sendKeys("ND_"+deviceid);
+		driver.findElement(By.xpath("//*[@id=\"model_DeviceId\"]")).sendKeys(deviceid);
 		driver.findElement(By.xpath("//*[@id=\"model_Name\"]")).sendKeys("Need Help");
 		driver.findElement(By.xpath("//*[@id=\"model_UserId_chosen\"]/a/span")).click();
 		driver.findElement(By.xpath("//*[@id=\"model_UserId_chosen\"]/div/div/input")).sendKeys(fullname);
@@ -77,14 +78,16 @@ public class CreateSensor extends InitiateDriver{
         
 		driver.findElement(By.xpath("/html/body/div[2]/form[2]/div/div[10]/div/input")).click();
 		
+		ApiClass.pdevice(deviceid);
+		
 		
 	}
 	
 	@Test(priority = 6)
 	public void createDoorWindowSensor() {
-		SimpleDateFormat formatter = new SimpleDateFormat("_ddmm_HHmmss");
+		SimpleDateFormat formatter = new SimpleDateFormat("ddmmHHmmss");
 		Date date = new Date();
-		String deviceid = firstname + formatter.format(date);
+		String deviceid = "D_" + formatter.format(date);
 		
 		driver.findElement(By.xpath("/html/body/div[2]/a")).click();
 		driver.findElement(By.xpath("//*[@id=\"SensorTypeId_chosen\"]/a/span")).click();
@@ -92,7 +95,7 @@ public class CreateSensor extends InitiateDriver{
 		driver.findElement(By.xpath("//*[@id=\"SensorTypeId_chosen\"]/div/div/input")).sendKeys(Keys.ENTER);
 		
 		
-		driver.findElement(By.xpath("//*[@id=\"model_DeviceId\"]")).sendKeys("DW_"+deviceid);
+		driver.findElement(By.xpath("//*[@id=\"model_DeviceId\"]")).sendKeys(deviceid);
 		driver.findElement(By.xpath("//*[@id=\"model_Name\"]")).sendKeys("DOORS AND WINDOWS");
 		driver.findElement(By.xpath("//*[@id=\"model_UserId_chosen\"]/a/span")).click();
 		driver.findElement(By.xpath("//*[@id=\"model_UserId_chosen\"]/div/div/input")).sendKeys(fullname);
@@ -112,22 +115,23 @@ public class CreateSensor extends InitiateDriver{
 		
 		
 		driver.findElement(By.xpath("/html/body/div[2]/form[2]/div/div[10]/div/input")).click();
+		ApiClass.ddevice(deviceid);
 		
 	}
 	
 	@Test(priority = 7)
 	public void createMotionSensor() {
 		
-		SimpleDateFormat formatter = new SimpleDateFormat("_ddmm_HHmmss");
+		SimpleDateFormat formatter = new SimpleDateFormat("ddmmHHmmss");
 		Date date = new Date();
-		String deviceid = firstname + formatter.format(date);
+		String deviceid = "M_"+formatter.format(date);
 		driver.findElement(By.xpath("/html/body/div[2]/a")).click();
 		driver.findElement(By.xpath("//*[@id=\"SensorTypeId_chosen\"]/a/span")).click();
 		driver.findElement(By.xpath("//*[@id=\"SensorTypeId_chosen\"]/div/div/input")).sendKeys("Monitoring");
 		driver.findElement(By.xpath("//*[@id=\"SensorTypeId_chosen\"]/div/div/input")).sendKeys(Keys.ENTER);
 		
 		
-		driver.findElement(By.xpath("//*[@id=\"model_DeviceId\"]")).sendKeys("M_"+deviceid);
+		driver.findElement(By.xpath("//*[@id=\"model_DeviceId\"]")).sendKeys(deviceid);
 		driver.findElement(By.xpath("//*[@id=\"model_Name\"]")).sendKeys("Monitoring");
 		driver.findElement(By.xpath("//*[@id=\"model_UserId_chosen\"]/a/span")).click();
 		driver.findElement(By.xpath("//*[@id=\"model_UserId_chosen\"]/div/div/input")).sendKeys(fullname);
@@ -144,6 +148,7 @@ public class CreateSensor extends InitiateDriver{
 		driver.findElement(By.xpath("//*[@id=\"main-body\"]/form[2]/div/div[9]/div/div[13]/input[1]")).sendKeys("0");
 		
 		driver.findElement(By.xpath("/html/body/div[2]/form[2]/div/div[10]/div/input")).click();
+		ApiClass.mdevice(deviceid);
 		
 	}
 

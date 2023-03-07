@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="chl.CreateSensor">
+      <class name="utils.ApiClass">
         <methods>
-          <include name="createDoorWindowSensor"/>
-          <include name="driverInitiation"/>
-          <include name="closeBrowser"/>
-          <include name="createMotionSensor"/>
+          <include name="panicButoon"/>
         </methods>
-      </class> <!-- chl.CreateSensor -->
+      </class> <!-- utils.ApiClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

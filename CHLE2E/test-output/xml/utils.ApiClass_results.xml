@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Default test"
+<testsuite name="Create Patient and verify patient is created "
            tests="3"
            failures="0"
            errors="0"
            skipped="0"
-           time="5.142">
+           time="5.718">
     <properties></properties>
 
 
 
             <testcase
-                name="panicButoon"
-                time="1.242"
+                name="motion"
+                time="1.224"
                 classname="utils.ApiClass">
             </testcase>
             <testcase
-                name="motion"
-                time="1.265"
+                name="panicButoon"
+                time="3.211"
                 classname="utils.ApiClass">
             </testcase>
             <testcase
                 name="doorAndWindow"
-                time="2.635"
+                time="1.283"
                 classname="utils.ApiClass">
             </testcase>
 </testsuite>
