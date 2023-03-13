@@ -13,6 +13,9 @@
 		name="Create Patient and verify patient is created ">
 		<classes>
 			<class name="chl.CreatePatient" />
+			<class name="chl.CreateSensor" />
+			<class name="utils.ApiClass" />
+			
 		</classes>
 	</test> <!-- Create Patient and verify patient is created -->
 </suite> <!-- CHL Create Patient -->

@@ -1,17 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="12" passed="10" failed="0" skipped="0">
   <reporter-output>
+    <line>
+      <![CDATA[Browser closed successfully]]>
+    </line>
   </reporter-output>
-  <suite started-at="2023-03-04T00:53:04 IST" name="Default suite" finished-at="2023-03-04T00:53:07 IST" duration-ms="2664">
+  <suite started-at="2023-03-07T18:14:52 IST" name="CHL Create Patient" finished-at="2023-03-07T18:15:39 IST" duration-ms="46633">
     <groups>
     </groups>
-    <test started-at="2023-03-04T00:53:04 IST" name="Default test" finished-at="2023-03-04T00:53:07 IST" duration-ms="2664">
+    <test started-at="2023-03-07T18:14:52 IST" name="Create Patient and verify patient is created " finished-at="2023-03-07T18:15:39 IST" duration-ms="46633">
+      <class name="chl.CreateSensor">
+        <test-method signature="openTLSAdmin()[pri:4, instance:chl.CreateSensor@46d59067]" started-at="2023-03-07T18:15:17 IST" name="openTLSAdmin" finished-at="2023-03-07T18:15:23 IST" duration-ms="5191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openTLSAdmin -->
+        <test-method signature="createNeedHelpSensor(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:5, instance:chl.CreateSensor@46d59067]" started-at="2023-03-07T18:15:23 IST" name="createNeedHelpSensor" data-provider="Patient Data" finished-at="2023-03-07T18:15:26 IST" duration-ms="3360" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Agency 1.1 (performance testing)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Zilong]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Alucard]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[zilongg@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[+917676567656]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[20-12-2022]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Male]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Chennai]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNeedHelpSensor -->
+        <test-method signature="createDoorWindowSensor()[pri:6, instance:chl.CreateSensor@46d59067]" started-at="2023-03-07T18:15:26 IST" name="createDoorWindowSensor" finished-at="2023-03-07T18:15:29 IST" duration-ms="3305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createDoorWindowSensor -->
+        <test-method signature="createMotionSensor()[pri:7, instance:chl.CreateSensor@46d59067]" started-at="2023-03-07T18:15:29 IST" name="createMotionSensor" finished-at="2023-03-07T18:15:33 IST" duration-ms="3555" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createMotionSensor -->
+      </class> <!-- chl.CreateSensor -->
       <class name="utils.ApiClass">
-        <test-method signature="panicButoon()[pri:0, instance:utils.ApiClass@338fc1d8]" started-at="2023-03-04T00:53:04 IST" name="panicButoon" finished-at="2023-03-04T00:53:07 IST" duration-ms="2634" status="PASS">
+        <test-method signature="panicButoon()[pri:8, instance:utils.ApiClass@2d0399f4]" started-at="2023-03-07T18:15:33 IST" name="panicButoon" finished-at="2023-03-07T18:15:36 IST" duration-ms="3211" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- panicButoon -->
+        <test-method signature="doorAndWindow()[pri:9, instance:utils.ApiClass@2d0399f4]" started-at="2023-03-07T18:15:36 IST" name="doorAndWindow" finished-at="2023-03-07T18:15:37 IST" duration-ms="1283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- doorAndWindow -->
+        <test-method signature="motion()[pri:10, instance:utils.ApiClass@2d0399f4]" started-at="2023-03-07T18:15:37 IST" name="motion" finished-at="2023-03-07T18:15:39 IST" duration-ms="1224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- motion -->
       </class> <!-- utils.ApiClass -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="chl.CreatePatient">
+        <test-method is-config="true" signature="driverInitiation()[pri:0, instance:chl.CreatePatient@7bbc8656]" started-at="2023-03-07T18:14:50 IST" name="driverInitiation" description="Login into CHL" finished-at="2023-03-07T18:14:52 IST" duration-ms="1430" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- driverInitiation -->
+        <test-method signature="login()[pri:1, instance:chl.CreatePatient@7bbc8656]" started-at="2023-03-07T18:14:52 IST" name="login" finished-at="2023-03-07T18:15:00 IST" duration-ms="8519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method signature="createPatient(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:2, instance:chl.CreatePatient@7bbc8656]" started-at="2023-03-07T18:15:02 IST" name="createPatient" data-provider="Patient Data" finished-at="2023-03-07T18:15:12 IST" duration-ms="10045" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Test Agency 1.1 (performance testing)]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Zilong]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Alucard]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[zilongg@gmail.com]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[+917676567656]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[20-12-2022]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Male]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[Chennai]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPatient -->
+        <test-method signature="patientList()[pri:3, instance:chl.CreatePatient@7bbc8656]" started-at="2023-03-07T18:15:12 IST" name="patientList" finished-at="2023-03-07T18:15:17 IST" duration-ms="5457" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- patientList -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:chl.CreatePatient@7bbc8656]" started-at="2023-03-07T18:15:39 IST" name="closeBrowser" description="Closing the browser" finished-at="2023-03-07T18:15:39 IST" duration-ms="115" status="PASS">
+          <reporter-output>
+            <line>
+              <![CDATA[Browser closed successfully]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- chl.CreatePatient -->
+    </test> <!-- Create Patient and verify patient is created  -->
+  </suite> <!-- CHL Create Patient -->
 </testng-results>

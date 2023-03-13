@@ -4,24 +4,24 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="24.021">
+           time="5.718">
     <properties></properties>
 
 
 
             <testcase
-                name="createPatient"
-                time="10.045"
-                classname="chl.CreatePatient">
+                name="motion"
+                time="1.224"
+                classname="utils.ApiClass">
             </testcase>
             <testcase
-                name="login"
-                time="8.519"
-                classname="chl.CreatePatient">
+                name="panicButoon"
+                time="3.211"
+                classname="utils.ApiClass">
             </testcase>
             <testcase
-                name="patientList"
-                time="5.457"
-                classname="chl.CreatePatient">
+                name="doorAndWindow"
+                time="1.283"
+                classname="utils.ApiClass">
             </testcase>
 </testsuite>

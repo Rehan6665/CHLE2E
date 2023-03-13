@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="chl.CreatePatient">
+      <class name="utils.ApiClass">
         <methods>
-          <include name="driverInitiation"/>
-          <include name="createPatient" invocation-numbers="0"/>
-          <include name="closeBrowser"/>
+          <include name="panicButoon"/>
         </methods>
-      </class> <!-- chl.CreatePatient -->
+      </class> <!-- utils.ApiClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
