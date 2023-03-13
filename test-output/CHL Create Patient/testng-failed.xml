@@ -8,13 +8,13 @@
   </listeners>
   <test thread-count="5" name="Create Patient and verify patient is created (failed)">
     <classes>
-      <class name="chl.CreatePatient">
+      <class name="chl.AcceptAlerts">
         <methods>
           <include name="driverInitiation"/>
-          <include name="createPatient" invocation-numbers="0"/>
           <include name="closeBrowser"/>
+          <include name="acceptAlerts"/>
         </methods>
-      </class> <!-- chl.CreatePatient -->
+      </class> <!-- chl.AcceptAlerts -->
     </classes>
   </test> <!-- Create Patient and verify patient is created (failed) -->
 </suite> <!-- Failed suite [CHL Create Patient] -->

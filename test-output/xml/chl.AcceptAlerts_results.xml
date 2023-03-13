@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Create Patient and verify patient is created "
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="50.871">
+    <properties></properties>
+
+
+
+            <testcase
+                name="acceptAlerts"
+                time="50.871"
+                classname="chl.AcceptAlerts">
+            </testcase>
+</testsuite>

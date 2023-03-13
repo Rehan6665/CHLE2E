@@ -79,6 +79,7 @@ public class CreateSensor extends InitiateDriver{
 		driver.findElement(By.xpath("/html/body/div[2]/form[2]/div/div[10]/div/input")).click();
 		
 		ApiClass.pdevice(deviceid);
+		AcceptAlerts.firstName(firstname);
 		
 		
 	}

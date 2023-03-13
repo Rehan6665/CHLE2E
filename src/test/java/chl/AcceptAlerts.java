@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.WindowType;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Reporter;
@@ -14,11 +15,22 @@ import org.testng.annotations.Test;
 import utils.InitiateDriver;
 
 public class AcceptAlerts extends InitiateDriver{
+	
+	static String firstname;
 
-	@Test
+	public static void firstName(String firstname) {
+
+		AcceptAlerts.firstname = firstname;
+	}
+
+
+	@Test(priority = 11)
 	public void acceptAlerts() throws InterruptedException {
 
-		String firstName = "Zilong";
+		String firstName =firstname;
+		//String firstName = "Martis";
+		
+		
 
 		driver.get("https://chl.alpha-app.tls.global/Account/Login");
 		driver.manage().window().maximize();
@@ -27,10 +39,16 @@ public class AcceptAlerts extends InitiateDriver{
 		driver.findElement(By.id("Password")).sendKeys("Test@123");
 		driver.findElement(By.xpath("//*[@id=\"loginForm\"]/form/div[3]/div/input")).click();
 
-		Thread.sleep(35000);
+		Thread.sleep(40000);
 		
 		driver.findElement(By.xpath("//*[@id=\"SearchString\"]")).sendKeys(firstName);
-		driver.findElement(By.xpath("//*[@id=\"main-body\"]/form/div[1]/div[2]/button")).click();
+		
+		
+		Actions act =  new Actions(driver);
+		act.moveToElement(driver.findElement(By.xpath("/html/body/div[2]/form/div[1]/div[2]/button"))).click().perform();
+		
+		
+		
 		
 		ArrayList<String> newTb = null;
 		int i =1;

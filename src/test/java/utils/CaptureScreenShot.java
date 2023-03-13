@@ -26,7 +26,7 @@ public class CaptureScreenShot extends InitiateDriver {
 
 		File screenShot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-		File destination =  new File("C:\\Users\\hp\\git\\CHLE2E\\CHLE2E\\ScreenShots\\"+screenshotfilename+".png");
+		File destination =  new File("D:\\CHLE2E\\screenshots"+screenshotfilename+".png");
 		FileUtils.moveFile(screenShot, destination);
 
 

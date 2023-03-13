@@ -14,7 +14,8 @@
 		<classes>
 			<class name="chl.CreatePatient" />
 			<class name="chl.CreateSensor" />
-			<class name="utils.ApiClass" />
+			<class name="chl.ApiClass" />
+			<class name="chl.AcceptAlerts" />
 			
 		</classes>
 	</test> <!-- Create Patient and verify patient is created -->
