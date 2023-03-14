@@ -4,24 +4,24 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="6.717">
+           time="20.167">
     <properties></properties>
 
 
 
             <testcase
-                name="panicButoon"
-                time="4.074"
-                classname="chl.ApiClass">
+                name="createOwner"
+                time="11.067"
+                classname="chl.CreateOwner">
             </testcase>
             <testcase
-                name="doorAndWindow"
-                time="1.195"
-                classname="chl.ApiClass">
+                name="assignSubscriptionToOwner"
+                time="4.241"
+                classname="chl.CreateOwner">
             </testcase>
             <testcase
-                name="motion"
-                time="1.448"
-                classname="chl.ApiClass">
+                name="createSubscripion"
+                time="4.859"
+                classname="chl.CreateOwner">
             </testcase>
 </testsuite>

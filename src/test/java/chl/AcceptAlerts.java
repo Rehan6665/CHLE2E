@@ -1,7 +1,9 @@
 package chl;
 
+import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Date;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -24,12 +26,15 @@ public class AcceptAlerts extends InitiateDriver{
 	}
 
 
-	@Test(priority = 11)
+	@Test(priority = 14)
 	public void acceptAlerts() throws InterruptedException {
 
-		String firstName =firstname;
-		//String firstName = "Martis";
+	//	String firstName =firstname;
+		//String firstName = "Kufra";
 		
+		SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy - HH:mm:ss");
+		Date date = new Date();
+		String time =formatter.format(date);
 		
 
 		driver.get("https://chl.alpha-app.tls.global/Account/Login");
@@ -38,50 +43,26 @@ public class AcceptAlerts extends InitiateDriver{
 		driver.findElement(By.id("Email")).sendKeys("mainsubowner@test.com");
 		driver.findElement(By.id("Password")).sendKeys("Test@123");
 		driver.findElement(By.xpath("//*[@id=\"loginForm\"]/form/div[3]/div/input")).click();
-
+		
 		Thread.sleep(40000);
 		
-		driver.findElement(By.xpath("//*[@id=\"SearchString\"]")).sendKeys(firstName);
+		
+		for(int i=1;i<=4;i++) {
 		
 		
-		Actions act =  new Actions(driver);
-		act.moveToElement(driver.findElement(By.xpath("/html/body/div[2]/form/div[1]/div[2]/button"))).click().perform();
-		
-		
-		
-		
-		ArrayList<String> newTb = null;
-		int i =1;
-		do
-		{
-		WebElement alertElement = driver.findElement(By.xpath("/html/body/div[2]/div[4]/div[2]/div["+i+"]/div[5]"));
-		String alertData = alertElement.getAttribute("id");
-		String alertId = alertData.replace("accept_alert_", "");
-		
-		//System.out.println(alertId);
-		String alertName = "https://chl.alpha-app.tls.global/Home/AddNotes?AlertID="+alertId+"";
-
-		
-		driver.switchTo().newWindow(WindowType.WINDOW);
-		driver.get(alertName);
-		newTb = new ArrayList<String>(driver.getWindowHandles());
-		
-		driver.switchTo().window(newTb.get(1));
-		//Thread.sleep(2000);
-	
-		driver.findElement(By.xpath("//*[@id=\"addnotes\"]")).click();
-		driver.findElement(By.xpath("//*[@id=\"addnotes\"]")).sendKeys("Resolved alert "+i+" - Testing ");
-		
-		driver.findElement(By.xpath("//*[@id=\"clr_alert\"]/span")).click();
-		Thread.sleep(2000);
-		driver.close();
-		i++;
-		driver.switchTo().window(newTb.get(0));
-		
-		
-		}while(i<4);
-		
-		
+		WebDriverWait wait=new WebDriverWait(driver, Duration.ofSeconds(20));
+		WebElement acceptAlert;
+		WebElement TextArea;
+		WebElement resolved;
+		acceptAlert = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[4]/div[2]/div[1]/div[5]/div")));
+		acceptAlert.click();
+		TextArea = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[4]/div[2]/div[1]/div[2]/div[1]/textarea")));
+		TextArea.click();
+		TextArea.sendKeys("Resolved Alert on: "+time);
+		resolved = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[2]/div[4]/div[2]/div[1]/div[2]/div[3]/div")));
+		resolved.click();
+		//driver.navigate().refresh();
+		}
 	}
 
 }

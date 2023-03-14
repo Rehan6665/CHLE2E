@@ -35,7 +35,7 @@ public class ApiClass {
 		d_deviceid = id;
 	}
 
-	@Test(priority = 8)
+	@Test(priority = 11)
 	public void panicButoon() {
 
 		
@@ -62,7 +62,7 @@ public class ApiClass {
 
 	}
 
-	@Test(priority = 9)
+	@Test(priority = 12)
 	public void doorAndWindow() {
 
 
@@ -86,7 +86,7 @@ public class ApiClass {
 
 	}
 
-	@Test(priority = 10)
+	@Test(priority = 13)
 	public void motion() {
 
 		JSONObject jsonData = new JSONObject();

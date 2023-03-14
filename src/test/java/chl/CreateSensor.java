@@ -28,7 +28,7 @@ public class CreateSensor extends InitiateDriver{
 	
 	
 	
-	@Test(priority = 4)
+	@Test(priority = 7)
 	public void openTLSAdmin() {
 		
 		
@@ -45,12 +45,15 @@ public class CreateSensor extends InitiateDriver{
 
 	}	
 	
-	@Test(priority = 5,dataProvider = "Patient Data",dataProviderClass = ExcelDataProvider.class)
+	@Test(priority = 8,dataProvider = "Patient Data",dataProviderClass = ExcelDataProvider.class)
 	public void createNeedHelpSensor(String subsription, String firstname, String lastname, String email
 			, String password, String contactNumber, String dob, String gender, String timeZone) throws InterruptedException{
 		
+		
+		
+		
 		this.firstname = firstname;
-		this.fullname = firstname +" "+lastname;
+		this.fullname = firstname +""+lastname;
 		
 		SimpleDateFormat formatter = new SimpleDateFormat("ddmmHHmmss");
 		Date date = new Date();
@@ -84,7 +87,7 @@ public class CreateSensor extends InitiateDriver{
 		
 	}
 	
-	@Test(priority = 6)
+	@Test(priority = 9)
 	public void createDoorWindowSensor() {
 		SimpleDateFormat formatter = new SimpleDateFormat("ddmmHHmmss");
 		Date date = new Date();
@@ -120,7 +123,7 @@ public class CreateSensor extends InitiateDriver{
 		
 	}
 	
-	@Test(priority = 7)
+	@Test(priority = 10)
 	public void createMotionSensor() {
 		
 		SimpleDateFormat formatter = new SimpleDateFormat("ddmmHHmmss");

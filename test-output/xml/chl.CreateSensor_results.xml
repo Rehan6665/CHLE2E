@@ -4,29 +4,29 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="15.887">
+           time="16.174">
     <properties></properties>
 
 
 
             <testcase
                 name="createMotionSensor"
-                time="3.694"
-                classname="chl.CreateSensor">
-            </testcase>
-            <testcase
-                name="createNeedHelpSensor"
-                time="3.625"
+                time="3.984"
                 classname="chl.CreateSensor">
             </testcase>
             <testcase
                 name="createDoorWindowSensor"
-                time="3.554"
+                time="4.407"
                 classname="chl.CreateSensor">
             </testcase>
             <testcase
                 name="openTLSAdmin"
-                time="5.014"
+                time="3.385"
+                classname="chl.CreateSensor">
+            </testcase>
+            <testcase
+                name="createNeedHelpSensor"
+                time="4.398"
                 classname="chl.CreateSensor">
             </testcase>
 </testsuite>

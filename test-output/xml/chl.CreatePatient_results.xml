@@ -4,24 +4,24 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="28.859">
+           time="25.304">
     <properties></properties>
 
 
 
             <testcase
+                name="login"
+                time="7.123"
+                classname="chl.CreatePatient">
+            </testcase>
+            <testcase
                 name="patientList"
-                time="7.995"
+                time="6.645"
                 classname="chl.CreatePatient">
             </testcase>
             <testcase
                 name="createPatient"
-                time="11.722"
-                classname="chl.CreatePatient">
-            </testcase>
-            <testcase
-                name="login"
-                time="9.142"
+                time="11.536"
                 classname="chl.CreatePatient">
             </testcase>
 </testsuite>

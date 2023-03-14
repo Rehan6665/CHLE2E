@@ -12,6 +12,7 @@
 	<test thread-count="5"
 		name="Create Patient and verify patient is created ">
 		<classes>
+			<class name="chl.CreateOwner" />
 			<class name="chl.CreatePatient" />
 			<class name="chl.CreateSensor" />
 			<class name="chl.ApiClass" />

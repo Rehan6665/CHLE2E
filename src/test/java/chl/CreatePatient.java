@@ -27,7 +27,7 @@ public class CreatePatient extends InitiateDriver{
 	String fullname;
 	
 
-	@Test(priority = 1)
+	@Test(priority = 4)
 	public void login() {
 		driver.get("https://chl.alpha-app.tls.global/Account/Login");
 		driver.manage().window().maximize();
@@ -42,7 +42,7 @@ public class CreatePatient extends InitiateDriver{
 	}
 
 
-	@Test(priority = 2,dataProvider = "Patient Data",dataProviderClass = ExcelDataProvider.class)
+	@Test(priority = 5,dataProvider = "Patient Data",dataProviderClass = ExcelDataProvider.class)
 	public void createPatient(String subsription, String firstname, String lastname, String email
 			, String password, String contactNumber, String dob, String gender, String timeZone) {
 		
@@ -152,7 +152,7 @@ public class CreatePatient extends InitiateDriver{
 		
 	}
 	
-	@Test(priority = 3)
+	@Test(priority = 6)
 	public void patientList() {
 		
 		

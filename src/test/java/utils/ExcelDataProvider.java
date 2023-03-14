@@ -12,9 +12,27 @@ public class ExcelDataProvider {
 
 	static String excelPath = "C:\\Users\\hp\\git\\CHLE2E\\CHLE2E\\Data\\LoginData.xlsx";
 	static String sheetName = "PatientDetails";
+	static String excelPath1 = "C:\\Users\\hp\\git\\CHLE2E\\CHLE2E\\Data\\LoginData.xlsx";
+	static String sheetName1 = "OwnerDetails";
+	static String excelPath2 = "C:\\Users\\hp\\git\\CHLE2E\\CHLE2E\\Data\\LoginData.xlsx";
+	static String sheetName2 = "ChildSubscrptionDetails";
 	
 
+	@DataProvider(name="Child Subscrption Details")
+	public  Object[][] getChildAgencyData() {
 
+		Object data[][] = testData(excelPath2, sheetName2);
+		return data; 
+
+	}
+	
+	@DataProvider(name="Owner Data")
+	public  Object[][] getownerData() {
+
+		Object data[][] = testData(excelPath1, sheetName1);
+		return data; 
+
+	}
 
 
 
