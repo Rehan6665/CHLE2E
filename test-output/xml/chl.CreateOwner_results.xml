@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Create Patient and verify patient is created "
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="20.167">
+    <properties></properties>
+
+
+
+            <testcase
+                name="createOwner"
+                time="11.067"
+                classname="chl.CreateOwner">
+            </testcase>
+            <testcase
+                name="assignSubscriptionToOwner"
+                time="4.241"
+                classname="chl.CreateOwner">
+            </testcase>
+            <testcase
+                name="createSubscripion"
+                time="4.859"
+                classname="chl.CreateOwner">
+            </testcase>
+</testsuite>

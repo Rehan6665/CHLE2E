@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Create Patient and verify patient is created "
+           tests="3"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="6.717">
+    <properties></properties>
+
+
+
+            <testcase
+                name="panicButoon"
+                time="4.074"
+                classname="chl.ApiClass">
+            </testcase>
+            <testcase
+                name="doorAndWindow"
+                time="1.195"
+                classname="chl.ApiClass">
+            </testcase>
+            <testcase
+                name="motion"
+                time="1.448"
+                classname="chl.ApiClass">
+            </testcase>
+</testsuite>
